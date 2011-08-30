@@ -1,0 +1,46 @@
+# required packages
+aufs-tools
+bridge-utils
+fsprotect
+isc-dhcp-client
+linux-image-2.6-amd64
+linux-tools-2.6
+nano
+nfs-common
+nis
+ntp
+pciutils
+psmisc
+syslinux
+
+# recommended packages
+deborphan
+localepurge
+openssh-client
+openssh-server
+rsync
+
+# optional packages
+denyhosts
+dvtm
+emacs23-nox
+ganglia-monitor
+gdb
+htop
+iperf
+less
+mc
+ngetty
+openjdk-6-jre-headless
+python-yaml
+ruby
+screen
+smartmontools
+strace
+sudo
+tcpdump
+valgrind
+vim-nox
+w3m
+zile
+zsh

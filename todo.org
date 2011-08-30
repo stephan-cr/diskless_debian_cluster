@@ -1,0 +1,11 @@
+#+TODO: TODO(t) NEEDS_TESTING(T) | DONE(d) CANCELED(c)
+
+* TODO-items
+** TODO install "etherwake" to wake up machines in the cluster
+** TODO use "netconsole" for debugging purposes
+** NEEDS_TESTING create password for root account
+** TODO file for ssh public keys to be copied to the root account
+** NEEDS_TESTING template mechanism for "etc" files
+** TODO check if "bin/whereami" is really required
+** TODO check if "etc/hosts" is really required
+** TODO improve documentation

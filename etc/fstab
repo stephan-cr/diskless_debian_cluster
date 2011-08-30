@@ -1,0 +1,6 @@
+/dev/nfs        /                       nfs     defaults        0       0
+none            /etc/network/run        tmpfs   defaults        0       0
+none            /tmp                    tmpfs   defaults        0       0
+none            /var/tmp                tmpfs   defaults        0       0
+none            /var/log                tmpfs   defaults        0       0
+@MASTERNODE_IP@:/vol/vol4                 /home   nfs     defaults        0       0

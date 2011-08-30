@@ -1,0 +1,19 @@
+#!/bin/sh
+# -*- mode: sh -*-
+#
+# Copyright (c) 2011, Stephan Creutz
+# Distributed under the GPLv3 License
+# See accompanying file LICENSE
+#
+# hook script to copy the bridge configuration tool in an initrd image
+
+case "$1" in
+    prereqs)
+        echo ""
+        exit 0
+        ;;
+esac
+
+. /usr/share/initramfs-tools/hook-functions
+
+copy_exec /usr/sbin/brctl /sbin
