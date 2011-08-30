@@ -1,0 +1,38 @@
+#!/bin/sh
+# -*- mode: sh -*-
+#
+# Copyright (c) 2011, Stephan Creutz
+# Distributed under the GPLv3 License
+# See accompanying file LICENSE
+#
+# initrd script to configure a linux ethernet bridge
+
+PREREQ=""
+
+prereqs() { echo "$PREREQ"; }
+
+case "$1" in
+    prereqs)
+        prereqs
+        exit 0
+        ;;
+esac
+
+. /scripts/functions
+
+if [ ! -x "/sbin/brctl" ] ; then
+    panic "brctl executable not found"
+fi
+
+bridge="br0"
+netdev="eth0"
+
+log_begin_msg "adding bridge $bridge"
+brctl addbr "$bridge" || panic "cannot add bridge $bridge"
+log_end_msg
+
+log_begin_msg "adding $netdev to bridge $bridge"
+brctl addif "$bridge" "$netdev" || panic \
+    "cannot add interface $netdev to bridge $bridge"
+brctl setfd "$bridge" 0 # set forward delay
+log_end_msg

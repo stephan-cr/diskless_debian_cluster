@@ -1,0 +1,6 @@
+#!/bin/sh
+# finds node's hostname based on matching ip in /etc/hosts
+
+grep `LC_ALL=C /sbin/ifconfig eth0 | \
+     awk '/inet addr:/ {split($2,a,":"); print a[2]}'` /etc/hosts | \
+     head -n 1 | cut -f2 | cut -d. -f1

@@ -1,0 +1,1 @@
+@NFSROOT@ @NETWORK@/@NETMASK@(ro,no_subtree_check,async,no_root_squash)
