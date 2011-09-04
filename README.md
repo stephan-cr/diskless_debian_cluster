@@ -1,10 +1,10 @@
 # Diskless Debian Cluster Setup Scripts
 
 are based on [Debian](http://www.debian.org) and the
-[Debian Diskless Cluster Howto](http://gabeortiz.net/2009/debian-diskless-cluster-howto/).
-The present scripts automate most of the steps described in that
-Howto. The difference to the just mentioned setup is, that it mounts
-the NFS root filesystem as read-only and puts
+[Debian Diskless Cluster Howto](http://gabeortiz.net/2009/debian-diskless-cluster-howto/)
+by Gabe Ortiz. The present scripts automate most of the steps
+described in that Howto. The difference to the just mentioned setup
+is, that it mounts the NFS root filesystem as read-only and puts
 [Aufs](http://aufs.sourceforge.net/) (an overlay-filesystem) on top of
 it.
 
@@ -20,7 +20,7 @@ lunch, sorry).
 primarily my personal needs, but I would love to see it becoming more
 general.
 
-If you are interested in a more mature project, then have a look
+If you are interested in a more mature project, then have a look at
 [FAI](http://fai-project.org).
 
 The following sections describe how to setup a diskless Debian cluster
@@ -44,8 +44,9 @@ system.
 
 ## Requirements for the worker nodes
 
-- the nodes must have PXE (Preboot Execution Environment) enabled and
-  the boot order must be changed to PXE first
+- the nodes must have
+  [PXE (Preboot Execution Environment)](http://en.wikipedia.org/wiki/Preboot_Execution_Environment)
+  enabled and the boot order must be changed to PXE first
 
 ## Setup
 
@@ -56,11 +57,8 @@ The instructions assume that you already have a working cluster
 installation.
 
 1. change in the base directory where the scripts reside
-
 2. configure "config.sh"
-
 3. run "prepare_master.sh"
-
 4. run "prepare_nfsroot.sh"
 
 ### DHCP entries
